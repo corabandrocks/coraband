@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cora - Rock band from Chicago's northwest suburbs. Check out our shows, music, and get in touch.">
+    <title>CORA | Rock Band</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="images/cora-logo.png" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <noscript><style>body{opacity:1!important}</style></noscript>
+</head>
+<body class="is-loading">
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg class="back-to-top-icon" viewBox="0 0 24 24" fill="none" width="24" height="24" aria-hidden="true">
+            <path d="M12 5l6 6M12 5l-6 6M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">CORA</div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#members">MEMBERS</a></li>
+                <li><a href="#shows">SHOWS</a></li>
+                <li><a href="#music">MUSIC</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <!-- Logo for grunge theme -->
+            <img src="images/cora-logo.png" alt="Cora Band Logo" class="hero-logo" fetchpriority="high" decoding="async" />
+            <!-- Text for default theme -->
+            <h1 class="hero-title">CORA</h1>
+            <p class="hero-subtitle">CHICAGO ROCK</p>
+        </div>
+    </section>
+
+    <!-- Band Section -->
+    <section id="members" class="section">
+        <div class="container">
+            <h2 class="section-title">MEMBERS</h2>
+            <div class="band-grid">
+                <div class="band-member alex" data-open="false">
+                    <div class="member-photo" role="button" tabindex="0" aria-label="Open Alex bio" aria-pressed="false">
+                        <img src="images/bio-alex.jpg" alt="Alex" loading="lazy" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+                        <div class="member-photo-meta" aria-hidden="true">
+                            <span class="member-photo-name">Alex</span>
+                            <span class="member-photo-role">Rhythm Guitar</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <div class="member-details-wrap">
+                            <p class="member-bio">Hello, I am Alex, and I play rhythm guitar. I do airsoft and I cook. My favorite bands are Jamiroquai, Rage Against the Machine, and Pantera. I also like the Ted series, the Iraq war, Saves the Day, alt girls, Transformers, and cool clothes. On field day in 6th grade, I got pantsed by Ben 19 times in a row and got in trouble.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="band-member ben" data-open="false">
+                    <div class="member-photo" role="button" tabindex="0" aria-label="Open Ben bio" aria-pressed="false">
+                        <img src="images/bio-ben.jpg" alt="Ben" loading="lazy" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+                        <div class="member-photo-meta" aria-hidden="true">
+                            <span class="member-photo-name">Ben</span>
+                            <span class="member-photo-role">Lead Guitar</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <div class="member-details-wrap">
+                            <p class="member-bio">Hello, I am Ben. I play lead guitar, and that means I am superior to Alex. I play football, sometimes basketball, and can play any basic instrument in a band like bass, drums, and more. My favorite music genres are pop punk, emo, and hardcore. My favorite bands are Fall Out Boy, My Chemical Romance, Taking Back Sunday, Panic! at the Disco, and Hawthorne Heights. I also like hanging out with friends, sledding, summer, and emo girls. Alex getting pantsed 19 times is a true story, and I am still very proud of myself for doing that.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="band-member tyler" data-open="false">
+                    <div class="member-photo" role="button" tabindex="0" aria-label="Open Tyler bio" aria-pressed="false">
+                        <img src="images/bio-tyler.jpg" alt="Tyler" loading="lazy" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+                        <div class="member-photo-meta" aria-hidden="true">
+                            <span class="member-photo-name">Tyler</span>
+                            <span class="member-photo-role">Lead Vocals</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <div class="member-details-wrap">
+                            <p class="member-bio">Yo, what is up yall, my name is Tyler, and I am the lead singer. Some of my favorite things include my lovely girlfriend, the Buffalo Bills, and Killdozer_TV. Some of my favorite bands and artists are Tyler, The Creator, Green Day, old Kanye, and ur mama (hehe). Some things that I do not like are IDing key signatures. I HATE DOING THAT RAAAAAHHH!!!!!!!!!!!!!! Ben told me the day after field day in 6th grade that he pantsed Alex 19 times.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="band-member ethan" data-open="false">
+                    <div class="member-photo" role="button" tabindex="0" aria-label="Open Ethan bio" aria-pressed="false">
+                        <img src="images/bio-ethan.jpg" alt="Ethan" loading="lazy" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+                        <div class="member-photo-meta" aria-hidden="true">
+                            <span class="member-photo-name">Ethan</span>
+                            <span class="member-photo-role">Drummer</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <div class="member-details-wrap">
+                            <p class="member-bio">Yo brosquito, I am Ethan, and I am the drummer. I have really long, luscious hair. I am like the male version of Rapunzel. Can someone please remind Tyler, and the old lady at the Little Caesars that stole my garlic bread, that they both owe me 20 bucks? ALSO ITS BEEN 17 WEEKS, WHERE IS MY PIZZA, LITTLE CEASARS!?!?!? Whatever you do, do not search up @SHMEGLE-f8y on YouTube, that is not me. It is my evil twin. Also, did you know that Ben pantsed Alex 19 times in 6th grade? Crazy, right?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="band-member connor" data-open="false">
+                    <div class="member-photo" role="button" tabindex="0" aria-label="Open Connor bio" aria-pressed="false">
+                        <img src="images/bio-connor.jpg" alt="Connor" loading="lazy" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+                        <div class="member-photo-meta" aria-hidden="true">
+                            <span class="member-photo-name">Connor</span>
+                            <span class="member-photo-role">Bass + Vocals</span>
+                        </div>
+                    </div>
+                    <div class="member-details">
+                        <div class="member-details-wrap">
+                            <p class="member-bio">Hey guys, my name is Connor, but you can call me anytime (haha). I play the bass and sing background vocals. My favorite band of all time is Parcels, my favorite album is It is Album Time, and my favorite song is Patience by Tame Impala. I am better at IDing key signatures than Tyler, and that is just a fact. I got accepted into the top two prestigious choirs at my high school as a freshman. I was there when Ben pantsed Alex 19 times, and it was one of the best experiences I have ever had.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section id="shows" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">PAST SHOWS</h2>
+            <div class="shows-list shows-past">
+                <div class="show-item">
+                    <div class="show-date">
+                        <span class="date-month">MAR</span>
+                        <span class="date-day">29</span>
+                    </div>
+                    <div class="show-details">
+                        <h3 class="show-venue">Rochaus</h3>
+                        <p class="show-location">92 W Main St, West Dundee, IL 60118</p>
+                        <p class="show-time">7:00 PM • with <a href="https://thebrokedowns.com/" target="_blank">The Brokedowns</a></p>
+                    </div>
+                    <div class="show-action">
+                    </div>
+                </div>
+                <div class="show-item">
+                    <div class="show-date">
+                        <span class="date-month">JAN</span>
+                        <span class="date-day">30</span>
+                    </div>
+                    <div class="show-details">
+                        <h3 class="show-venue">Rochaus</h3>
+                        <p class="show-location">92 W Main St, West Dundee, IL 60118</p>
+                        <p class="show-time">7:00 PM • with <a href="https://www.instagram.com/hackysack_band/" target="_blank">Hackysack</a></p>
+                    </div>
+                    <div class="show-action"></div>
+                </div>
+                
+                <div class="show-item">
+                    <div class="show-date">
+                        <span class="date-month">OCT</span>
+                        <span class="date-day">31</span>
+                    </div>
+                    <div class="show-details">
+                        <h4 class="show-venue">Megyery Mansion</h4>
+                        <p class="show-location">116 N 5th St, West Dundee, IL 60118</p>
+                        <p class="show-time">6:00 PM • Halloween Extravaganza</p>
+                    </div>
+                    <div class="show-action">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="section">
+        <div class="container">
+            <h2 class="section-title">MUSIC</h2>
+            <div class="music-grid">
+                <!-- Bandcamp Embed 1 - Replace with actual Bandcamp embed code -->
+                <div class="music-embed">
+                    <div class="embed-placeholder">
+                        <p>BANDCAMP EMBED 1</p>
+                        <small>Replace with actual Bandcamp iframe code</small>
+                    </div>
+                    <!-- Example structure:
+                    <iframe style="border: 0; width: 100%; height: 120px;" 
+                        src="https://bandcamp.com/EmbeddedPlayer/album=ALBUM_ID/size=large/bgcol=0a0a0a/linkcol=cc0000/tracklist=false/artwork=small/transparent=true/" 
+                        seamless>
+                    </iframe>
+                    -->
+                </div>
+
+                <!-- Bandcamp Embed 2 -->
+                <div class="music-embed">
+                    <div class="embed-placeholder">
+                        <p>BANDCAMP EMBED 2</p>
+                        <small>Replace with actual Bandcamp iframe code</small>
+                    </div>
+                </div>
+
+                <!-- Bandcamp Embed 3 -->
+                <div class="music-embed">
+                    <div class="embed-placeholder">
+                        <p>BANDCAMP EMBED 3</p>
+                        <small>Replace with actual Bandcamp iframe code</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">GET IN TOUCH</h2>
+            <div class="contact-content">
+                <p class="contact-text">Book us for a show, collaborate, or just say hey.</p>
+                <a href="mailto:contact@cora.band" class="btn btn-primary btn-large">EMAIL US</a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                        <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 CORA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
