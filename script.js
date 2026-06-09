@@ -113,68 +113,35 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 window.addEventListener('load', updateActiveNav);
 
-// Members accordion behavior: keep one column open at a time
-const membersGrid = document.querySelector('.band-grid');
-const memberPanels = document.querySelectorAll('.band-member');
+// Members bio cards
+const memberCards = document.querySelectorAll('.member-card');
+const membersGrid = document.querySelector('.members-grid');
 
-function updateMembersGridState() {
-    if (!membersGrid) {
-        return;
-    }
+memberCards.forEach(card => {
+    const btn = card.querySelector('.member-thumb');
+    const drawer = card.querySelector('.member-bio-drawer');
 
-    const hasOpenPanel = [...memberPanels].some(panel => panel.dataset.open === 'true');
-    membersGrid.classList.toggle('has-open', hasOpenPanel);
-}
+    btn.addEventListener('click', () => {
+        const isOpen = card.classList.contains('is-open');
 
-function scrollMemberToCenter(panel) {
-    const navHeight = nav ? nav.offsetHeight : 0;
-    const panelRect = panel.getBoundingClientRect();
-    const panelCenterY = panelRect.top + (panelRect.height / 2);
-    const viewportCenterY = navHeight + ((window.innerHeight - navHeight) / 2);
-    const scrollDelta = panelCenterY - viewportCenterY;
-
-    window.scrollBy({
-        top: scrollDelta,
-        behavior: 'smooth'
-    });
-}
-
-memberPanels.forEach(panel => {
-    panel.addEventListener('click', () => {
-        const isCurrentlyOpen = panel.dataset.open === 'true';
-        
-        // Close all other panels
-        memberPanels.forEach(otherPanel => {
-            if (otherPanel !== panel) {
-                otherPanel.dataset.open = 'false';
-            }
+        // Close all cards
+        memberCards.forEach(c => {
+            c.classList.remove('is-open');
+            c.querySelector('.member-thumb').setAttribute('aria-expanded', 'false');
         });
-        
-        // Toggle current panel
-        panel.dataset.open = isCurrentlyOpen ? 'false' : 'true';
-        updateMembersGridState();
+        membersGrid?.classList.remove('has-open');
 
-        if (!isCurrentlyOpen) {
-            // Wait for layout changes before centering the opened member.
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    scrollMemberToCenter(panel);
-                });
-            });
-        }
-    });
-    
-    // Make panel keyboard accessible
-    panel.setAttribute('tabindex', '0');
-    panel.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            panel.click();
+        if (!isOpen) {
+            card.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+            membersGrid?.classList.add('has-open');
+            // After the card expands, scroll it into view if needed
+            setTimeout(() => {
+                card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 350);
         }
     });
 });
-
-updateMembersGridState();
 
 // Optional: Add animation on scroll for elements
 const observerOptions = {
